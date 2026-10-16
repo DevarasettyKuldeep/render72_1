@@ -1,0 +1,183 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 630 880" width="630" height="880">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0c14" />
+      <stop offset="50%" stop-color="#121829" />
+      <stop offset="100%" stop-color="#06080e" />
+    </linearGradient>
+
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffdf70" />
+      <stop offset="35%" stop-color="#e5a93c" />
+      <stop offset="70%" stop-color="#fff1b0" />
+      <stop offset="100%" stop-color="#c88b20" />
+    </linearGradient>
+
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe" />
+      <stop offset="100%" stop-color="#4facfe" />
+    </linearGradient>
+
+    <linearGradient id="cardBorderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffd700" stop-opacity="0.8" />
+      <stop offset="30%" stop-color="#38bdf8" stop-opacity="0.6" />
+      <stop offset="70%" stop-color="#ffd700" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#818cf8" stop-opacity="0.5" />
+    </linearGradient>
+
+    <radialGradient id="holoGlow" cx="50%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#ffd700" stop-opacity="0.25" />
+      <stop offset="40%" stop-color="#38bdf8" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <pattern id="dotGrid" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.2" fill="#38bdf8" fill-opacity="0.18" />
+    </pattern>
+  </defs>
+
+  <style>
+    .font-mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+    .font-sans { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+  </style>
+
+  <!-- Card Base -->
+  <rect x="0" y="0" width="630" height="880" rx="28" fill="url(#bgGrad)" />
+
+  <!-- Dot Grid Pattern -->
+  <rect x="18" y="18" width="594" height="844" rx="22" fill="url(#dotGrid)" />
+
+  <!-- Inner Ambient Glow -->
+  <ellipse cx="315" cy="380" rx="260" ry="240" fill="url(#holoGlow)" />
+
+  <!-- Card Outer Tech Border -->
+  <rect x="16" y="16" width="598" height="848" rx="22" fill="none" stroke="url(#cardBorderGrad)" stroke-width="2.5" />
+  <rect x="24" y="24" width="582" height="832" rx="18" fill="none" stroke="#ffffff" stroke-opacity="0.1" stroke-width="1" />
+
+  <!-- Corner Tech Accents -->
+  <path d="M 24 60 L 24 24 L 60 24" fill="none" stroke="#ffd700" stroke-width="3" />
+  <path d="M 606 60 L 606 24 L 570 24" fill="none" stroke="#ffd700" stroke-width="3" />
+  <path d="M 24 820 L 24 856 L 60 856" fill="none" stroke="#ffd700" stroke-width="3" />
+  <path d="M 606 820 L 606 856 L 570 856" fill="none" stroke="#ffd700" stroke-width="3" />
+
+  <!-- Header Section -->
+  <g transform="translate(48, 56)">
+    <!-- Top Bar -->
+    <rect x="0" y="0" width="130" height="24" rx="12" fill="#ffd700" fill-opacity="0.15" stroke="#ffd700" stroke-opacity="0.6" stroke-width="1" />
+    <circle cx="12" cy="12" r="4" fill="#ffd700" />
+    <text x="24" y="16" class="font-mono" font-size="11" font-weight="700" fill="#ffd700" letter-spacing="1.5">RENDER72</text>
+
+    <!-- Pass Type Badge -->
+    <rect x="404" y="0" width="130" height="24" rx="12" fill="#00f2fe" fill-opacity="0.15" stroke="#00f2fe" stroke-opacity="0.6" stroke-width="1" />
+    <text x="469" y="16" class="font-mono" font-size="11" font-weight="700" fill="#00f2fe" letter-spacing="1" text-anchor="middle">OFFICIAL PASS</text>
+
+    <!-- Subtitle -->
+    <text x="0" y="58" class="font-mono" font-size="12" font-weight="600" fill="#94a3b8" letter-spacing="3">PARTICIPANT AUDITION PASS</text>
+    <text x="0" y="98" class="font-sans" font-size="34" font-weight="900" fill="url(#goldGrad)" letter-spacing="-0.5">RENDER72</text>
+  </g>
+
+  <!-- Golden Chip Emblem -->
+  <g transform="translate(48, 185)">
+    <rect x="0" y="0" width="76" height="58" rx="8" fill="#1e293b" stroke="url(#goldGrad)" stroke-width="1.8" />
+    <!-- Chip contacts -->
+    <path d="M 0 19 L 24 19 M 0 38 L 24 38 M 76 19 L 52 19 M 76 38 L 52 38 M 38 0 L 38 18 M 38 40 L 38 58" stroke="#ffd700" stroke-opacity="0.8" stroke-width="1.5" />
+    <circle cx="38" cy="29" r="8" fill="none" stroke="#ffd700" stroke-width="1.5" />
+
+    <!-- Access Level Text -->
+    <text x="96" y="24" class="font-mono" font-size="10" font-weight="600" fill="#64748b" letter-spacing="2">ACCESS LEVEL</text>
+    <text x="96" y="46" class="font-sans" font-size="18" font-weight="800" fill="#f8fafc" letter-spacing="1">HACKATHON VIP</text>
+  </g>
+
+  <!-- Central Card Art / Crest -->
+  <g transform="translate(315, 385)">
+    <!-- Concentric Hexagon Rings -->
+    <polygon points="0,-120 104,-60 104,60 0,120 -104,60 -104,-60" fill="#0f172a" stroke="url(#cardBorderGrad)" stroke-width="2.5" />
+    <polygon points="0,-95 82,-47 82,47 0,95 -82,47 -82,-47" fill="#141e33" fill-opacity="0.8" stroke="#38bdf8" stroke-opacity="0.4" stroke-width="1.5" />
+    <polygon points="0,-70 60,-35 60,35 0,70 -60,35 -60,-35" fill="none" stroke="#ffd700" stroke-opacity="0.6" stroke-width="1.5" />
+
+    <!-- Center Monogram -->
+    <text x="0" y="-8" class="font-sans" font-size="38" font-weight="900" fill="url(#goldGrad)" text-anchor="middle" letter-spacing="2">72</text>
+    <text x="0" y="24" class="font-mono" font-size="12" font-weight="700" fill="#38bdf8" text-anchor="middle" letter-spacing="4">CORE LAB</text>
+  </g>
+
+  <!-- Seat Confirmation Box -->
+  <g transform="translate(48, 545)">
+    <rect x="0" y="0" width="534" height="96" rx="14" fill="#0d1322" stroke="#334155" stroke-width="1.2" />
+
+    <text x="24" y="32" class="font-mono" font-size="11" font-weight="700" fill="#00f2fe" letter-spacing="2">STATUS: CONFIRMED</text>
+    <text x="24" y="66" class="font-sans" font-size="24" font-weight="800" fill="#ffffff" letter-spacing="-0.3">Your Seat Confirmed</text>
+    <text x="24" y="84" class="font-mono" font-size="11" fill="#94a3b8">SECTOR A · AUDITORIUM 01</text>
+
+    <!-- Verification Checkmark Shield -->
+    <circle cx="474" cy="48" r="24" fill="#ffd700" fill-opacity="0.12" stroke="#ffd700" stroke-width="1.5" />
+    <path d="M 464 48 L 471 55 L 485 41" fill="none" stroke="#ffd700" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+
+  <!-- Date & Venue Info Grid -->
+  <g transform="translate(48, 665)">
+    <!-- Date -->
+    <rect x="0" y="0" width="255" height="64" rx="10" fill="#0f172a" stroke="#1e293b" stroke-width="1" />
+    <text x="18" y="24" class="font-mono" font-size="10" font-weight="600" fill="#64748b" letter-spacing="1.5">DATE OF HACKATHON</text>
+    <text x="18" y="48" class="font-sans" font-size="15" font-weight="700" fill="#f1f5f9">13 October 2026</text>
+
+    <!-- Venue -->
+    <rect x="279" y="0" width="255" height="64" rx="10" fill="#0f172a" stroke="#1e293b" stroke-width="1" />
+    <text x="297" y="24" class="font-mono" font-size="10" font-weight="600" fill="#64748b" letter-spacing="1.5">VENUE LOCATION</text>
+    <text x="297" y="48" class="font-sans" font-size="15" font-weight="700" fill="#f1f5f9">Anugraha Hall · AB3</text>
+  </g>
+
+  <!-- Barcode & Ticket Perforation Line -->
+  <g transform="translate(48, 755)">
+    <!-- Perforation line -->
+    <line x1="0" y1="0" x2="534" y2="0" stroke="#334155" stroke-dasharray="6,6" stroke-width="1.5" />
+
+    <!-- Barcode strips -->
+    <g transform="translate(0, 18)">
+      <!-- Render realistic barcode pattern -->
+      <rect x="0" y="0" width="3" height="34" fill="#e2e8f0" />
+      <rect x="6" y="0" width="2" height="34" fill="#e2e8f0" />
+      <rect x="12" y="0" width="5" height="34" fill="#e2e8f0" />
+      <rect x="21" y="0" width="2" height="34" fill="#e2e8f0" />
+      <rect x="27" y="0" width="4" height="34" fill="#e2e8f0" />
+      <rect x="35" y="0" width="2" height="34" fill="#e2e8f0" />
+      <rect x="42" y="0" width="6" height="34" fill="#e2e8f0" />
+      <rect x="52" y="0" width="2" height="34" fill="#e2e8f0" />
+      <rect x="58" y="0" width="3" height="34" fill="#e2e8f0" />
+      <rect x="65" y="0" width="5" height="34" fill="#e2e8f0" />
+      <rect x="74" y="0" width="2" height="34" fill="#e2e8f0" />
+      <rect x="80" y="0" width="4" height="34" fill="#e2e8f0" />
+      <rect x="88" y="0" width="6" height="34" fill="#e2e8f0" />
+      <rect x="98" y="0" width="2" height="34" fill="#e2e8f0" />
+      <rect x="104" y="0" width="4" height="34" fill="#e2e8f0" />
+      <rect x="112" y="0" width="3" height="34" fill="#e2e8f0" />
+      <rect x="118" y="0" width="6" height="34" fill="#e2e8f0" />
+      <rect x="128" y="0" width="2" height="34" fill="#e2e8f0" />
+      <rect x="134" y="0" width="4" height="34" fill="#e2e8f0" />
+      <rect x="142" y="0" width="2" height="34" fill="#e2e8f0" />
+      <rect x="148" y="0" width="5" height="34" fill="#e2e8f0" />
+      <rect x="157" y="0" width="3" height="34" fill="#e2e8f0" />
+      <rect x="164" y="0" width="4" height="34" fill="#e2e8f0" />
+      <rect x="172" y="0" width="2" height="34" fill="#e2e8f0" />
+      <rect x="178" y="0" width="6" height="34" fill="#e2e8f0" />
+      <rect x="188" y="0" width="3" height="34" fill="#e2e8f0" />
+      <rect x="195" y="0" width="4" height="34" fill="#e2e8f0" />
+      <rect x="203" y="0" width="2" height="34" fill="#e2e8f0" />
+      <rect x="210" y="0" width="5" height="34" fill="#e2e8f0" />
+
+      <!-- Serial Text -->
+      <text x="0" y="48" class="font-mono" font-size="10" fill="#64748b" letter-spacing="1">NO. 83-R72-2026-PASS</text>
+    </g>
+
+    <!-- Flip Instruction pill -->
+    <g transform="translate(354, 18)">
+      <rect x="0" y="4" width="180" height="32" rx="16" fill="#ffd700" fill-opacity="0.12" stroke="#ffd700" stroke-opacity="0.5" stroke-width="1" />
+      <text x="90" y="24" class="font-sans" font-size="11" font-weight="700" fill="#ffd700" text-anchor="middle">Click card to flip ↺</text>
+    </g>
+  </g>
+</svg>

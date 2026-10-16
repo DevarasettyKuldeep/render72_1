@@ -21,6 +21,8 @@ export type {
   FAQ
 }
 
+import fallbackData from '../data/fallbackEvents.json'
+
 let _cache: EventItem[] | null = null
 let _promise: Promise<EventItem[]> | null = null
 
@@ -37,7 +39,16 @@ async function fetchAllEvents(): Promise<EventItem[]> {
         _cache = d.events as EventItem[]
         return _cache
       })
-      .catch(e => { _promise = null; throw e })
+      .catch(e => {
+        // Graceful fallback for offline, college WiFi blocks on pages.dev, or network outages
+        console.warn('Live API unreachable, using bundled fallback events:', e)
+        if (Array.isArray(fallbackData?.events)) {
+          _cache = fallbackData.events as EventItem[]
+          return _cache
+        }
+        _promise = null
+        throw e
+      })
   }
   return _promise
 }
@@ -73,9 +84,19 @@ export function useEvents() {
 }
 
 export async function fetchEventById(id: string): Promise<EventItem> {
-  const r = await fetch(`${API_BASE}/${id}`)
-  if (!r.ok) throw new Error('Event not found.')
-  const d = await r.json()
-  if (!d.event) throw new Error('Unexpected API format.')
-  return d.event as EventItem
+  try {
+    const r = await fetch(`${API_BASE}/${id}`)
+    if (r.ok) {
+      const d = await r.json()
+      if (d.event) return d.event as EventItem
+    }
+  } catch {
+    // continue to fallback
+  }
+
+  const fallbackList = _cache || (fallbackData?.events as EventItem[]) || []
+  const found = fallbackList.find(e => e.id === id)
+  if (found) return found
+
+  throw new Error('Event not found.')
 }

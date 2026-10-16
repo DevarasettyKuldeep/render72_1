@@ -2,6 +2,7 @@ import { lazy, Suspense } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import ScrollToTop from './components/ScrollToTop'
 import HomePage from './pages/HomePage'
 
 // Code-split secondary routes and heavy interactive components to minimize initial TBT & LCP
@@ -12,6 +13,7 @@ const EasterEggModal = lazy(() => import('./components/EasterEggModal'))
 export default function App() {
   return (
     <>
+      <ScrollToTop />
       <Navbar />
       <Suspense
         fallback={

@@ -76,6 +76,7 @@ export default function EventDetailPage() {
 
   useEffect(() => {
     if (!id) return
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
     let active = true
     fetchEventById(id)
       .then(d => {

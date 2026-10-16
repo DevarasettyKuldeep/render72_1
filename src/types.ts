@@ -83,5 +83,3 @@ export interface EventItem {
   eligibility?: string[];
   prerequisites?: string[];
 }
-
-export const API_BASE = 'https://render72.pages.dev/api/test/events';

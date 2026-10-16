@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gather-render72.vercel.app/sitemap.xml
